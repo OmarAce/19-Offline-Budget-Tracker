@@ -1,6 +1,10 @@
+// Dependancies
 const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
 
+// Transaction Methods
+
+// Post Single Transaction to Database
 router.post("/api/transaction", ({ body }, res) => {
   Transaction.create(body)
     .then(dbTransaction => {
@@ -11,6 +15,7 @@ router.post("/api/transaction", ({ body }, res) => {
     });
 });
 
+// Post Multiple Transactions to Database
 router.post("/api/transaction/bulk", ({ body }, res) => {
   Transaction.insertMany(body)
     .then(dbTransaction => {
@@ -21,6 +26,7 @@ router.post("/api/transaction/bulk", ({ body }, res) => {
     });
 });
 
+// Recieve Transaction Data from Database
 router.get("/api/transaction", (req, res) => {
   Transaction.find({})
     .sort({ date: -1 })
@@ -32,4 +38,5 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
+// Export
 module.exports = router;
