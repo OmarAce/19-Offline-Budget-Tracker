@@ -13,7 +13,7 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("/public"));
+app.use(express.static(__dirname + "/public"));
 
 // connecting with MongoDB via mongoose at our myapp database running locally on default port 27017
 mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/budget", { 
