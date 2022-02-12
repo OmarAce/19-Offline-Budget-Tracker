@@ -1,0 +1,18 @@
+{
+    "name": "Budget Tracker App",
+    "short_name": "Budget Tracker",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "icons/icon-192x192.png",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "type": "image/png"
+        }
+    ]
+}
