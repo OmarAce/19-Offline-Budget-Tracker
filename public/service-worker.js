@@ -1,12 +1,13 @@
 const FILES_TO_CACHE = [
     "/",
+    "/db.js",
     "/index.html",
     "/index.js",
     "/styles.css"
 ];
 
-    const CACHE_NAME = 'static-cache-v3';
-    const DATA_CACHE_NAME = 'data-cache-v3';
+    const CACHE_NAME = 'static-cache-v4';
+    const DATA_CACHE_NAME = 'data-cache-v4';
 
     //Install service worker
     self.addEventListener('install', event => {
